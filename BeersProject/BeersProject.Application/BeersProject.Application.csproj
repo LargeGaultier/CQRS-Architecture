@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.101" />
+    <PackageReference Include="MediatR" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Beer\Commands\" />
+    <Folder Include="Brewery\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BeersProject.Domain\BeersProject.Domain.csproj" />
+    <ProjectReference Include="..\BeersProject.Persistence\BeersProject.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

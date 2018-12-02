@@ -3,3 +3,13 @@
 ################################################################################
 
 /BeersProject/.vs
+/BeersProject/BeerProject.Infrastucture/obj
+/BeersProject/BeerProject.Infrastucture/bin/Debug/netcoreapp2.1
+/BeersProject/BeersProject.Application/bin/Debug/netcoreapp2.1
+/BeersProject/BeersProject.Application/obj
+/BeersProject/BeersProject.Domain/bin/Debug/netcoreapp2.1
+/BeersProject/BeersProject.Domain/obj
+/BeersProject/BeersProject.Persistence/bin/Debug/netcoreapp2.1
+/BeersProject/BeersProject.Persistence/obj
+/BeersProject/BeersProject.WebApi/bin/Debug
+/BeersProject/BeersProject.WebApi/obj
