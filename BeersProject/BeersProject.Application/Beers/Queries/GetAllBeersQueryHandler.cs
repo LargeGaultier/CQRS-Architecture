@@ -1,4 +1,4 @@
-﻿using BeersProject.Application.Beer.Models;
+﻿using BeersProject.Application.Beers.Models;
 using BeersProject.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BeersProject.Application.Beer.Queries
+namespace BeersProject.Application.Beers.Queries
 {
     public class GetAllBeersQueryHandler : IRequestHandler<GetAllBeersQuery, List<BeerDto>>
     {

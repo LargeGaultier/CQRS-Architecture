@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using BeersProject.Application.Beer.Models;
-using BeersProject.Application.Beer.Queries;
+using BeersProject.Application.Beers.Commands.CreateBeer;
+using BeersProject.Application.Beers.Models;
+using BeersProject.Application.Beers.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BeersProject.WebApi.Controllers
@@ -19,6 +21,12 @@ namespace BeersProject.WebApi.Controllers
             return Ok(await Mediator.Send(new GetAllBeersQuery()));
         }
 
-       
+        [HttpPost]
+        [Route("/api/Beers")]
+        [ProducesResponseType(typeof(Unit), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> Post([FromBody] CreateBeerCommand command)
+        {
+            return Ok(await Mediator.Send(command));
+        }
     }
 }

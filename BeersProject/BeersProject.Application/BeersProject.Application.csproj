@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Beer\Commands\" />
-    <Folder Include="Brewery\" />
+    <Folder Include="Beers\Commands\DeleteBeer\" />
+    <Folder Include="Beers\Commands\UpdateBeer\" />
+    <Folder Include="Breweries\" />
   </ItemGroup>
 
   <ItemGroup>

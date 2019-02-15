@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using BeersProject.Domain.Entities;
 
-namespace BeersProject.Application.Beer.Models
+namespace BeersProject.Application.Beers.Models
 {
     public class BeerDto
     {
