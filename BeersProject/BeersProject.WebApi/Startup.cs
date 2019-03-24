@@ -36,10 +36,13 @@ namespace BeersProject.WebApi
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
-
+            
+            //rajouter la ligne pour le faire par reflexion
             services.AddMediatR(typeof(GetAllBeersQueryHandler).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(CreateBeerCommandHandler).GetTypeInfo().Assembly);
 
+            // Register the Swagger services
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +57,8 @@ namespace BeersProject.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
               //  app.UseHsts();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUi3();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
